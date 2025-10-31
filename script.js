@@ -24,23 +24,20 @@ resetBtn.addEventListener('click', () => {
 function updateDisplay() {
     countDisplay.textContent = count;
     
-    // Add a small animation effect
-    countDisplay.style.transform = 'scale(1.2)';
+    // Add a small animation effect using CSS class
+    countDisplay.classList.add('animate');
     setTimeout(() => {
-        countDisplay.style.transform = 'scale(1)';
+        countDisplay.classList.remove('animate');
     }, 200);
 }
 
 // Animate button click
 function animateButton(button) {
-    button.style.transform = 'scale(0.95)';
+    button.classList.add('animate-click');
     setTimeout(() => {
-        button.style.transform = 'scale(1)';
+        button.classList.remove('animate-click');
     }, 100);
 }
-
-// Add smooth transition to count display
-countDisplay.style.transition = 'transform 0.2s ease';
 
 // Log a welcome message to console
 console.log('Welcome to the application! The app is ready.');

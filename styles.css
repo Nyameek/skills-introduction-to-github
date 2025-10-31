@@ -78,6 +78,11 @@ section h2 {
     color: #667eea;
     font-weight: bold;
     font-size: 1.3em;
+    transition: transform 0.2s ease;
+}
+
+#count.animate {
+    transform: scale(1.2);
 }
 
 button {
@@ -100,6 +105,10 @@ button:hover {
 
 button:active {
     transform: translateY(0);
+}
+
+button.animate-click {
+    transform: scale(0.95);
 }
 
 #resetBtn {
